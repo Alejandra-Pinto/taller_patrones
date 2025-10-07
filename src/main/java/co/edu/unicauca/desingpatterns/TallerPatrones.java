@@ -51,6 +51,7 @@ public class TallerPatrones {
         
         
         //APLICANDO PATRÓN DECORATOR
+        System.out.println(" ");
         System.out.println("PATRÓN DECORATOR");
         System.out.println("PROYECTO: " + normalProject.getDescription());
         System.out.println("PROYECTO CON PATRÓN DECORADOR: " + priorityProject.getDescription());
