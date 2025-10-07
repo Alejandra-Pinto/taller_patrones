@@ -1,5 +1,9 @@
 package co.edu.unicauca.desingpatterns;
 
+import co.edu.unicauca.DesignPatterns.adapter.Company;
+import co.edu.unicauca.DesignPatterns.adapter.CompanyDataProvider;
+import co.edu.unicauca.DesignPatterns.adapter.ExternalService;
+import co.edu.unicauca.DesignPatterns.adapter.ExternalServiceAdapter;
 import co.edu.unicauca.DesignPatterns.decorator.PriorityProject;
 import co.edu.unicauca.DesignPatterns.decorator.ProjectD;
 import co.edu.unicauca.DesignPatterns.facade.PlatformFacade;
@@ -40,7 +44,6 @@ public class TallerPatrones {
         //INSTANCIAS DE PATRÓN DECORATE
         ProjectD normalProject = new ProjectD("Plataforma de aprendizaje adaptativo basada en IA", 
                 "Diseño e implementación de un sistema inteligente que personaliza el contenido educativo según el desempeño del estudiante");
-        
         ProjectD priorityProject = new PriorityProject(normalProject);
 
         
@@ -50,11 +53,24 @@ public class TallerPatrones {
         plataforma.manageProject(practica);
         
         
-        //APLICANDO PATRÓN DECORATOR
-        System.out.println(" ");
-        System.out.println("PATRÓN DECORATOR");
-        System.out.println("PROYECTO: " + normalProject.getDescription());
-        System.out.println("PROYECTO CON PATRÓN DECORADOR: " + priorityProject.getDescription());
+        //INSTANCIAS DE PATRÓN ADAPTER
+        ExternalService externalService = new ExternalService();
+        String jsonData = externalService.getCompanyData();
+        CompanyDataProvider adapter = new ExternalServiceAdapter(externalService);
+        Company company = adapter.getCompany();
         
+        
+        //APLICANDO PATRÓN DECORATOR
+        System.out.println("\n========================================================PATRÓN DECORATOR======================================================================");
+        System.out.println("\nPROYECTO ORIGINAL: " + normalProject);
+        System.out.println("\nPROYECTO CON PATRÓN DECORADOR: " + priorityProject);
+        
+        
+        //APLICANDO PATRÓN ADAPTER
+        System.out.println("\n========================================================PATRÓN ADAPTER========================================================================");
+        System.out.println("\nDATOS ORIGINALES DE LA EMPRESA EN FORMATO JSON:");
+        System.out.println(jsonData);
+        System.out.println("\nDATOS ADAPTADOS DE LA EMPRESA OBJETO COMPANY: ");
+        System.out.println(company);
     }
 }

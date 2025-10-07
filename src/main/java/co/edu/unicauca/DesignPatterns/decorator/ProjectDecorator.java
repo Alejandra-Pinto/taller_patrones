@@ -1,7 +1,6 @@
 package co.edu.unicauca.DesignPatterns.decorator;
 
-//Clase abstracta que actua como decorador base
-//Extiende ProjectD y contiene una referencia a otro ProjectD
+//Clase abstracta que actua como decorador base, extiende ProjectD y contiene una referencia a otro ProjectD
 
 public abstract class ProjectDecorator extends ProjectD {
     //Atributo project (referencia a ProjectD)
@@ -22,5 +21,10 @@ public abstract class ProjectDecorator extends ProjectD {
     @Override
     public String getDescription(){
         return project.getDescription();
+    }
+    
+    @Override
+    public String toString() {
+        return "\nTítulo: " + getTitle() + "\nDescripción: " + getDescription();
     }
 }

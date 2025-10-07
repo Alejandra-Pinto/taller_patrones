@@ -9,9 +9,19 @@ public class PriorityProject extends ProjectDecorator{
     }
     
     @Override
-    public String getDescription(){
-        //Añado la funcionalidad adicional
-        return project.getTitle() + "[High Priority";
+    public String getDescription() {
+        return project.getDescription();
     }
+
+    @Override
+    public String getTitle() {
+        return project.getTitle() + " [High Priority]";
+    }
+
+    @Override
+    public String toString() {
+        return "\nTítulo: " + getTitle() + "\nDescripción: " + getDescription();
+    }
+
     
 }
