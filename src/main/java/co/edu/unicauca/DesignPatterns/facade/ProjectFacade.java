@@ -1,4 +1,4 @@
-package co.edu.unicauca.desingpatterns.facade;
+package co.edu.unicauca.DesignPatterns.facade;
 
 import java.util.List;
 
@@ -81,16 +81,16 @@ public class ProjectFacade {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("📘 Proyecto: ").append(title)
+        sb.append("Proyecto: ").append(title)
           .append("\nModalidad: ").append(modality)
           .append("\nDirector: ").append(director)
           .append("\nEstudiante 1: ").append(student1);
         if (student2 != null) {
             sb.append("\nEstudiante 2: ").append(student2);
         }
-        sb.append("\nFecha de creación: ").append(creationDate)
+        sb.append("\nFecha de creacion: ").append(creationDate)
           .append("\nObjetivo general: ").append(generalObjective)
-          .append("\nObjetivos específicos: ");
+          .append("\nObjetivos especificos: ");
         if (specificObjectives != null) {
             for (String obj : specificObjectives) {
                 sb.append("\n   - ").append(obj);
