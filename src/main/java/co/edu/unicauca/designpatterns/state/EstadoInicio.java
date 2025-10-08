@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package co.edu.unicauca.designpatterns.state;
+package co.edu.unicauca.DesignPatterns.state;
 
 /**
  *
@@ -20,7 +20,7 @@ public class EstadoInicio implements IEstadoProyecto {
 
     @Override
     public void corregir(ProjectState proyecto) {
-        System.out.println("No se puede corregir. El proyecto aun no ha sido evaluado.");
+        System.out.println("No se puede corregir. El proyecto aún no ha sido evaluado.");
     }
 
     @Override

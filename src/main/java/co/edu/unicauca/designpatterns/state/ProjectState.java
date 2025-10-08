@@ -1,16 +1,11 @@
+package co.edu.unicauca.DesignPatterns.state;
 
-package co.edu.unicauca.designpatterns.state;
+import java.util.List;
 
 /**
  *
  * @author sebas
  */
-
-
-import java.util.List;
-
-import java.util.List;
-
 public class ProjectState {
     private String title;
     private String modality;
@@ -23,8 +18,11 @@ public class ProjectState {
     private String generalObjective;
     private List<String> specificObjectives;
 
-    // NUEVO: atributo del patrón State
+    // Atributo del patrón State
     private IEstadoProyecto estadoActual;
+
+    // Contador de correcciones del comité
+    private int intentosCorreccionComite = 0;
 
     public ProjectState(String title, String modality, String student1, String student2,
                          String creationDate, String director, String coDirector1,
@@ -65,8 +63,21 @@ public class ProjectState {
         this.estadoActual = nuevoEstado;
     }
 
-    public String getEstadoActual() {
-        return estadoActual.getNombreEstado();
+    public IEstadoProyecto getEstadoActual() {
+        return estadoActual;
+    }
+
+    // 🔹 NUEVOS MÉTODOS: control del número de correcciones por comité
+    public int getIntentosCorreccionComite() {
+        return intentosCorreccionComite;
+    }
+
+    public void incrementarIntentosCorreccionComite() {
+        this.intentosCorreccionComite++;
+    }
+
+    public void resetIntentosCorreccionComite() {
+        this.intentosCorreccionComite = 0;
     }
 
     @Override

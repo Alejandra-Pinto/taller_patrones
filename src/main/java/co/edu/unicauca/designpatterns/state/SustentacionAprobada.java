@@ -1,4 +1,4 @@
-package co.edu.unicauca.designpatterns.state;
+package co.edu.unicauca.DesignPatterns.state;
 
 public class SustentacionAprobada implements IEstadoProyecto {
 
@@ -14,7 +14,7 @@ public class SustentacionAprobada implements IEstadoProyecto {
 
     @Override
     public void aprobar(ProjectState proyecto) {
-        System.out.println("El proyecto ya fue aprobado. No hay mas pasos.");
+        System.out.println("El proyecto ya fue aprobado. No hay más pasos.");
     }
 
     @Override
@@ -24,6 +24,6 @@ public class SustentacionAprobada implements IEstadoProyecto {
 
     @Override
     public String getNombreEstado() {
-        return "Sustentacion Aprobada";
+        return "Sustentación Aprobada";
     }
 }

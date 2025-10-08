@@ -1,4 +1,4 @@
-package co.edu.unicauca.designpatterns.state;
+package co.edu.unicauca.DesignPatterns.state;
 
 public class RechazadoPorComite implements IEstadoProyecto {
 
@@ -10,7 +10,7 @@ public class RechazadoPorComite implements IEstadoProyecto {
 
     @Override
     public void corregir(ProjectState proyecto) {
-        System.out.println("No se pueden realizar correcciones. El comite ya rechazo el proyecto.");
+        System.out.println("No se pueden realizar correcciones. El comité ya rechazó el proyecto.");
     }
 
     @Override
@@ -20,11 +20,11 @@ public class RechazadoPorComite implements IEstadoProyecto {
 
     @Override
     public void rechazar(ProjectState proyecto) {
-        System.out.println("Ya fue rechazado por el comite.");
+        System.out.println("Ya fue rechazado por el comité.");
     }
 
     @Override
     public String getNombreEstado() {
-        return "Rechazado por comite";
+        return "Rechazado por comité";
     }
 }

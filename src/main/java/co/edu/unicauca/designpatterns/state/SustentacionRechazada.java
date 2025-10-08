@@ -1,10 +1,10 @@
-package co.edu.unicauca.designpatterns.state;
+package co.edu.unicauca.DesignPatterns.state;
 
 public class SustentacionRechazada implements IEstadoProyecto {
 
     @Override
     public void avanzar(ProjectState proyecto) {
-        System.out.println("El proyecto ha sido rechazado en la sustentacion. Fin del proceso.");
+        System.out.println("El proyecto ha sido rechazado en la sustentación. Fin del proceso.");
     }
 
     @Override
@@ -24,6 +24,6 @@ public class SustentacionRechazada implements IEstadoProyecto {
 
     @Override
     public String getNombreEstado() {
-        return "Sustentacion Rechazada";
+        return "Sustentación Rechazada";
     }
 }

@@ -1,4 +1,4 @@
-package co.edu.unicauca.designpatterns.state;
+package co.edu.unicauca.DesignPatterns.state;
 
 public class EvaluadorRechaza implements IEstadoProyecto {
 

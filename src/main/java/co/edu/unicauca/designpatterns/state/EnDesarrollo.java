@@ -1,10 +1,10 @@
-package co.edu.unicauca.designpatterns.state;
+package co.edu.unicauca.DesignPatterns.state;
 
 public class EnDesarrollo implements IEstadoProyecto {
 
     @Override
     public void avanzar(ProjectState proyecto) {
-        System.out.println("El proyecto ha completado su desarrollo. Se presenta la monografia para revision.");
+        System.out.println("El proyecto ha completado su desarrollo. Se presenta la monografía para revisión.");
         proyecto.setEstado(new FinalizadoMonografia());
     }
 
@@ -20,7 +20,7 @@ public class EnDesarrollo implements IEstadoProyecto {
 
     @Override
     public void rechazar(ProjectState proyecto) {
-        System.out.println("El proyecto no puede rechazarse en esta etapa sin revision formal.");
+        System.out.println("El proyecto no puede rechazarse en esta etapa sin revisión formal.");
     }
 
     @Override

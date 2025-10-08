@@ -1,30 +1,30 @@
-package co.edu.unicauca.designpatterns.state;
+package co.edu.unicauca.DesignPatterns.state;
 
 public class FechaSustentacionFijada implements IEstadoProyecto {
 
     @Override
     public void avanzar(ProjectState proyecto) {
-        System.out.println("El Consejo ha fijado la fecha y evaluadores. Se procede con la sustentacion publica.");
+        System.out.println("El Consejo ha fijado la fecha y evaluadores. Se procede con la sustentación pública.");
         proyecto.setEstado(new SustentacionPublica());
     }
 
     @Override
     public void corregir(ProjectState proyecto) {
-        System.out.println("No se permiten correcciones. El proyecto está a la espera de la sustentacion.");
+        System.out.println("No se permiten correcciones. El proyecto está a la espera de la sustentación.");
     }
 
     @Override
     public void aprobar(ProjectState proyecto) {
-        System.out.println("Aun no se puede aprobar. Falta realizar la sustentacion.");
+        System.out.println("Aún no se puede aprobar. Falta realizar la sustentación.");
     }
 
     @Override
     public void rechazar(ProjectState proyecto) {
-        System.out.println("No se puede rechazar. La sustentacion aun no ha sido realizada.");
+        System.out.println("No se puede rechazar. La sustentación aún no ha sido realizada.");
     }
 
     @Override
     public String getNombreEstado() {
-        return "Fecha de Sustentacion Fijada";
+        return "Fecha de Sustentación Fijada";
     }
 }

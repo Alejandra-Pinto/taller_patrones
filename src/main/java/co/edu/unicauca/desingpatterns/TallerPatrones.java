@@ -8,7 +8,7 @@ import co.edu.unicauca.DesignPatterns.decorator.PriorityProject;
 import co.edu.unicauca.DesignPatterns.decorator.ProjectD;
 import co.edu.unicauca.DesignPatterns.facade.PlatformFacade;
 import co.edu.unicauca.DesignPatterns.facade.ProjectFacade;
-import co.edu.unicauca.designpatterns.state.ProjectState;
+import co.edu.unicauca.DesignPatterns.state.ProjectState;
 import java.util.Arrays;
 
 /**
