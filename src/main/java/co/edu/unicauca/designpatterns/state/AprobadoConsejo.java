@@ -4,7 +4,7 @@ public class AprobadoConsejo implements IEstadoProyecto {
 
     @Override
     public void avanzar(ProjectState proyecto) {
-        System.out.println("El Consejo de Facultad ha aprobado el proyecto. Se procede a emitir la resolución.");
+        System.out.println("El Consejo de Facultad ha aprobado el proyecto. Se procede a emitir la resolucion.");
         proyecto.setEstado(new ResolucionAprobado());
     }
 

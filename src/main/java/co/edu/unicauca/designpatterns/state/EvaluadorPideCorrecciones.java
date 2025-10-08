@@ -4,13 +4,13 @@ public class EvaluadorPideCorrecciones implements IEstadoProyecto {
 
     @Override
     public void avanzar(ProjectState proyecto) {
-        System.out.println("Las correcciones fueron realizadas. Se envía de nuevo a evaluación del departamento.");
+        System.out.println("Las correcciones fueron realizadas. Se envía de nuevo a evaluacion del departamento.");
         proyecto.setEstado(new EvaluacionDepartamento());
     }
 
     @Override
     public void corregir(ProjectState proyecto) {
-        System.out.println("El anteproyecto está siendo corregido según las observaciones del evaluador.");
+        System.out.println("El anteproyecto esta siendo corregido según las observaciones del evaluador.");
     }
 
     @Override
@@ -20,7 +20,7 @@ public class EvaluadorPideCorrecciones implements IEstadoProyecto {
 
     @Override
     public void rechazar(ProjectState proyecto) {
-        System.out.println("El evaluador debe emitir su decisión tras la reevaluación.");
+        System.out.println("El evaluador debe emitir su decision tras la reevaluacion.");
     }
 
     @Override

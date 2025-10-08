@@ -20,7 +20,7 @@ public class EstadoInicio implements IEstadoProyecto {
 
     @Override
     public void corregir(ProjectState proyecto) {
-        System.out.println("No se puede corregir. El proyecto aún no ha sido evaluado.");
+        System.out.println("No se puede corregir. El proyecto aun no ha sido evaluado.");
     }
 
     @Override

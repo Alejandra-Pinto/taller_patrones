@@ -4,7 +4,7 @@ public class EvaluadorAcepta implements IEstadoProyecto {
 
     @Override
     public void avanzar(ProjectState proyecto) {
-        System.out.println("El anteproyecto fue aceptado. Se envía al Consejo de Facultad para aprobación final.");
+        System.out.println("El anteproyecto fue aceptado. Se envia al Consejo de Facultad para aprobacion final.");
         proyecto.setEstado(new AprobadoConsejo());
     }
 
@@ -15,7 +15,7 @@ public class EvaluadorAcepta implements IEstadoProyecto {
 
     @Override
     public void aprobar(ProjectState proyecto) {
-        System.out.println("El anteproyecto ya está aprobado por el evaluador.");
+        System.out.println("El anteproyecto ya esta aprobado por el evaluador.");
     }
 
     @Override

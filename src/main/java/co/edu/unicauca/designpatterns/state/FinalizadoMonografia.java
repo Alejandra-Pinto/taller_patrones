@@ -4,7 +4,7 @@ public class FinalizadoMonografia implements IEstadoProyecto {
 
     @Override
     public void avanzar(ProjectState proyecto) {
-        System.out.println("El proyecto ha sido finalizado. Se entrega la monografía y anexos a Decanatura.");
+        System.out.println("El proyecto ha sido finalizado. Se entrega la monografia y anexos a Decanatura.");
         proyecto.setEstado(new PresentadoDecanatura());
     }
 
@@ -15,16 +15,16 @@ public class FinalizadoMonografia implements IEstadoProyecto {
 
     @Override
     public void aprobar(ProjectState proyecto) {
-        System.out.println("El proyecto no puede aprobarse aún. Debe ser entregado a Decanatura primero.");
+        System.out.println("El proyecto no puede aprobarse aun. Debe ser entregado a Decanatura primero.");
     }
 
     @Override
     public void rechazar(ProjectState proyecto) {
-        System.out.println("El proyecto finalizado no puede ser rechazado sin evaluación formal.");
+        System.out.println("El proyecto finalizado no puede ser rechazado sin evaluacion formal.");
     }
 
     @Override
     public String getNombreEstado() {
-        return "Finalizado Monografía";
+        return "Finalizado Monografia";
     }
 }

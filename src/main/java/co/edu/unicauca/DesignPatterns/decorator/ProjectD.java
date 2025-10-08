@@ -29,7 +29,7 @@ public class ProjectD {
     
     @Override
     public String toString(){
-        return "\nTítulo: " + title + "\nDescripción: " + description;
+        return "\nTitulo: " + title + "\nDescripcion: " + description;
     }
     
 }

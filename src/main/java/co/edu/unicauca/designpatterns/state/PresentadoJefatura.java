@@ -4,13 +4,13 @@ public class PresentadoJefatura implements IEstadoProyecto {
 
     @Override
     public void avanzar(ProjectState proyecto) {
-        System.out.println("El anteproyecto ha sido enviado al departamento para evaluación.");
+        System.out.println("El anteproyecto ha sido enviado al departamento para evaluacion.");
         proyecto.setEstado(new EvaluacionDepartamento());
     }
 
     @Override
     public void corregir(ProjectState proyecto) {
-        System.out.println("No puedes hacer correcciones. Está en revisión de la jefatura.");
+        System.out.println("No puedes hacer correcciones. Está en revision de la jefatura.");
     }
 
     @Override

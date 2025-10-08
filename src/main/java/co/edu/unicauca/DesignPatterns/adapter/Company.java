@@ -30,7 +30,7 @@ public class Company {
     
     @Override
     public String toString(){
-        return "Empresa: " + name + "\nDescripción: " + description;
+        return "Empresa: " + name + "\nDescripcion: " + description;
     }
     
 }

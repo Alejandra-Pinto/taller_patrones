@@ -4,7 +4,7 @@ public class EnDesarrollo implements IEstadoProyecto {
 
     @Override
     public void avanzar(ProjectState proyecto) {
-        System.out.println("El proyecto ha completado su desarrollo. Se presenta la monografía para revisión.");
+        System.out.println("El proyecto ha completado su desarrollo. Se presenta la monografia para revision.");
         proyecto.setEstado(new FinalizadoMonografia());
     }
 
@@ -20,7 +20,7 @@ public class EnDesarrollo implements IEstadoProyecto {
 
     @Override
     public void rechazar(ProjectState proyecto) {
-        System.out.println("El proyecto no puede rechazarse en esta etapa sin revisión formal.");
+        System.out.println("El proyecto no puede rechazarse en esta etapa sin revision formal.");
     }
 
     @Override

@@ -20,7 +20,7 @@ public class PriorityProject extends ProjectDecorator{
 
     @Override
     public String toString() {
-        return "\nTítulo: " + getTitle() + "\nDescripción: " + getDescription();
+        return "\nTitulo: " + getTitle() + "\nDescripcion: " + getDescription();
     }
 
     

@@ -6,7 +6,7 @@ public class ProjectFacade {
     private String title;
     private String modality;
     private String student1;
-    private String student2; // Solo se usa en investigación
+    private String student2; 
     private String creationDate;
     private String director;
     private String coDirector1;
@@ -14,7 +14,6 @@ public class ProjectFacade {
     private String generalObjective;
     private List<String> specificObjectives;
 
-    // 🔹 Constructor completo
     public ProjectFacade(String title, String modality, String student1, String student2,
                          String creationDate, String director, String coDirector1,
                          String coDirector2, String generalObjective, List<String> specificObjectives) {
@@ -30,14 +29,12 @@ public class ProjectFacade {
         this.specificObjectives = specificObjectives;
     }
 
-    // 🔹 Constructor sin segundo estudiante (para práctica profesional)
     public ProjectFacade(String title, String modality, String student1,
                          String creationDate, String director, String generalObjective,
                          List<String> specificObjectives) {
         this(title, modality, student1, null, creationDate, director, null, null, generalObjective, specificObjectives);
     }
 
-    // 🔹 Getters y Setters
     public String getTitle() {
         return title;
     }

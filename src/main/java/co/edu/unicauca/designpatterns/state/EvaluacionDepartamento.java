@@ -12,7 +12,7 @@ public class EvaluacionDepartamento implements IEstadoProyecto {
     public void corregir(ProjectState proyecto) {
         intentosCorreccion++;
         if (intentosCorreccion > 3) {
-            System.out.println("Se superó el número máximo de correcciones (3). Proyecto rechazado por el departamento.");
+            System.out.println("Se supero el número máximo de correcciones (3). Proyecto rechazado por el departamento.");
             proyecto.setEstado(new EvaluadorRechaza());
         } else {
             System.out.println("El evaluador ha solicitado correcciones al anteproyecto.");
@@ -34,6 +34,6 @@ public class EvaluacionDepartamento implements IEstadoProyecto {
 
     @Override
     public String getNombreEstado() {
-        return "Evaluación Departamento";
+        return "Evaluacion Departamento";
     }
 }

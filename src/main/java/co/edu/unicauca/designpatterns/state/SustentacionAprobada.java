@@ -14,7 +14,7 @@ public class SustentacionAprobada implements IEstadoProyecto {
 
     @Override
     public void aprobar(ProjectState proyecto) {
-        System.out.println("El proyecto ya fue aprobado. No hay más pasos.");
+        System.out.println("El proyecto ya fue aprobado. No hay mas pasos.");
     }
 
     @Override
@@ -24,6 +24,6 @@ public class SustentacionAprobada implements IEstadoProyecto {
 
     @Override
     public String getNombreEstado() {
-        return "Sustentación Aprobada";
+        return "Sustentacion Aprobada";
     }
 }
