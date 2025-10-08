@@ -15,6 +15,12 @@ import co.edu.unicauca.DesignPatterns.state.ProjectState;
 import co.edu.unicauca.DesignPatterns.template.EvaluationTemplate;
 import co.edu.unicauca.DesignPatterns.template.EvaluationInvestigation;
 import co.edu.unicauca.DesignPatterns.template.EvaluationPractica;
+import co.edu.unicauca.DesignPatterns.template.ProfessionalPracticeEvaluator;
+import co.edu.unicauca.DesignPatterns.template.Project;
+import co.edu.unicauca.DesignPatterns.template.ProjectEvaluator;
+import co.edu.unicauca.DesignPatterns.template.ResearchProjectEvaluator;
+
+
 
 import java.util.Arrays;
 
@@ -152,14 +158,28 @@ public class TallerPatrones {
         //APLICANDO PATRÓN TEMPLATE
         System.out.println("\n========================================================PATRON TEMPLATE======================================================================");
 
-        EvaluationTemplate investigacionEval = new EvaluationInvestigation();
-        EvaluationTemplate practicaEval      = new EvaluationPractica();
+        EvaluationTemplate investigacionEval1 = new EvaluationInvestigation();
+        EvaluationTemplate practicaEval1      = new EvaluationPractica();
 
         System.out.println("\n--- Evaluación Proyecto de Investigación ---");
-        investigacionEval.evaluarProyecto();
+        investigacionEval1.evaluarProyecto();
 
         System.out.println("\n--- Evaluación Práctica Profesional ---");
-        practicaEval.evaluarProyecto();
+        practicaEval1.evaluarProyecto();
+        
+        System.out.println("\n========================================================PATRÓN TEMPLATE OFICIAL======================================================================");
+
+        Project investigacionProject = new Project("Modelo IA para detección de enfermedades", "Investigación", "Ana Torres");
+        Project practicaProject = new Project("Sistema web para inventarios", "Práctica Profesional", "Sofía Herrera");
+
+        ProjectEvaluator investigacionEval2 = new ResearchProjectEvaluator();
+        ProjectEvaluator practicaEval2 = new ProfessionalPracticeEvaluator();
+
+        System.out.println("\n--- Evaluación Proyecto de Investigación ---");
+        investigacionEval2.evaluate(investigacionProject);
+
+        System.out.println("\n--- Evaluación Práctica Profesional ---");
+        practicaEval2.evaluate(practicaProject);
 
     }
 }
