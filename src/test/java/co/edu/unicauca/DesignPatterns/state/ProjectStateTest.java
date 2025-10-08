@@ -42,13 +42,13 @@ public class ProjectStateTest {
 
         // 2. Formato A Diligenciado → Presentado al Coordinador
         proyecto.setEstado(new EstadoInicio());
-        proyecto.presentar();
+        proyecto.avanzar();
         assertTrue(proyecto.getEstadoActual() instanceof PresentadoAlCoordinador,
                 "Debe pasar a PresentadoAlCoordinador tras presentar al coordinador");
 
         // 3. Presentado al Coordinador → En Evaluación por Comité
         proyecto.setEstado(new PresentadoAlCoordinador());
-        proyecto.presentar();
+        proyecto.avanzar();
         assertTrue(proyecto.getEstadoActual() instanceof EnEvaluacionComite,
                 "El proyecto debe pasar a EnEvaluacionComite");
 
@@ -81,19 +81,19 @@ public class ProjectStateTest {
 
         // 7. Docente y estudiante redactan anteproyecto
         proyecto.setEstado(new AceptadoPorComite());
-        proyecto.presentar();
+        proyecto.avanzar();
         assertTrue(proyecto.getEstadoActual() instanceof EscribiendoAnteproyecto,
                 "Debe pasar a EscribiendoAnteproyecto tras la aprobación del comité");
 
         // 8. Anteproyecto → Presentado a jefatura
         proyecto.setEstado(new EscribiendoAnteproyecto());
-        proyecto.presentar();
+        proyecto.avanzar();
         assertTrue(proyecto.getEstadoActual() instanceof PresentadoJefatura,
                 "Debe pasar a PresentadoJefatura");
 
         // 9. Jefatura → Evaluación del Departamento
         proyecto.setEstado(new PresentadoJefatura());
-        proyecto.presentar();
+        proyecto.avanzar();
         assertTrue(proyecto.getEstadoActual() instanceof EvaluacionDepartamento,
                 "Debe pasar a EvaluacionDepartamento");
 

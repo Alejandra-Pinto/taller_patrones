@@ -1,7 +1,7 @@
 package co.edu.unicauca.DesignPatterns.state;
 
 public class CorreccionesComite implements IEstadoProyecto {
-    private int intentosCorreccion = 1;
+    private int intentosCorreccion = 0;
 
     @Override
     public void avanzar(ProjectState proyecto) {

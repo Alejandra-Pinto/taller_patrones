@@ -53,7 +53,7 @@ public class ProjectState {
     public List<String> getSpecificObjectives() { return specificObjectives; }
 
     // Métodos del patrón State (delegan al estado actual)
-    public void presentar() { estadoActual.avanzar(this); }
+    public void avanzar() { estadoActual.avanzar(this); }
     public void corregir() { estadoActual.corregir(this); }
     public void aprobar() { estadoActual.aprobar(this); }
     public void rechazar() { estadoActual.rechazar(this); }
@@ -67,7 +67,7 @@ public class ProjectState {
         return estadoActual;
     }
 
-    // 🔹 NUEVOS MÉTODOS: control del número de correcciones por comité
+    // Control del número de correcciones por comité
     public int getIntentosCorreccionComite() {
         return intentosCorreccionComite;
     }

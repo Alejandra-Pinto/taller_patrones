@@ -100,15 +100,15 @@ public class TallerPatrones {
         //APLICANDO PATRÓN STATE
         System.out.println("\n========================================================PATRON STATE======================================================================");
         System.out.println("===== SIMULACION COMPLETA DE PROYECTO =====");
-        System.out.println("Estado inicial: " + proyecto.getEstadoActual());
+        System.out.println("Estado inicial: " + proyecto.getEstadoActual().getNombreEstado());
         System.out.println("============================================\n");
 
         for (String accion : acciones) {
-            System.out.println(">> Accion ejecutada: " + accion.toUpperCase());
+            System.out.println(">> Accion a ejecutar: " + accion.toUpperCase());
 
             switch (accion) {
                 case "avanzar":
-                    proyecto.presentar();
+                    proyecto.avanzar();
                     break;
                 case "corregir":
                     proyecto.corregir();
@@ -124,7 +124,7 @@ public class TallerPatrones {
                     break;
             }
 
-            System.out.println("Estado actual: " + proyecto.getEstadoActual());
+            System.out.println("Estado actual: " + proyecto.getEstadoActual().getNombreEstado());
             System.out.println("--------------------------------------------");
         }
 
