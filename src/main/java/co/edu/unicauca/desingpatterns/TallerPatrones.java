@@ -1,5 +1,6 @@
 package co.edu.unicauca.desingpatterns;
 
+
 import co.edu.unicauca.DesignPatterns.adapter.Company;
 import co.edu.unicauca.DesignPatterns.adapter.CompanyDataProvider;
 import co.edu.unicauca.DesignPatterns.adapter.ExternalService;
@@ -8,7 +9,13 @@ import co.edu.unicauca.DesignPatterns.decorator.PriorityProject;
 import co.edu.unicauca.DesignPatterns.decorator.ProjectD;
 import co.edu.unicauca.DesignPatterns.facade.PlatformFacade;
 import co.edu.unicauca.DesignPatterns.facade.ProjectFacade;
+
 import co.edu.unicauca.DesignPatterns.state.ProjectState;
+
+import co.edu.unicauca.DesignPatterns.template.EvaluationTemplate;
+import co.edu.unicauca.DesignPatterns.template.EvaluationInvestigation;
+import co.edu.unicauca.DesignPatterns.template.EvaluationPractica;
+
 import java.util.Arrays;
 
 /**
@@ -142,5 +149,17 @@ public class TallerPatrones {
         System.out.println("\nDATOS ADAPTADOS DE LA EMPRESA OBJETO COMPANY: ");
         System.out.println(company);
         
+        //APLICANDO PATRÓN TEMPLATE
+        System.out.println("\n========================================================PATRON TEMPLATE======================================================================");
+
+        EvaluationTemplate investigacionEval = new EvaluationInvestigation();
+        EvaluationTemplate practicaEval      = new EvaluationPractica();
+
+        System.out.println("\n--- Evaluación Proyecto de Investigación ---");
+        investigacionEval.evaluarProyecto();
+
+        System.out.println("\n--- Evaluación Práctica Profesional ---");
+        practicaEval.evaluarProyecto();
+
     }
 }
