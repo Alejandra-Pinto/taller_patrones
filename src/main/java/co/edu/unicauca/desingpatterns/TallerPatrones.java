@@ -146,8 +146,6 @@ public class TallerPatrones {
         System.out.println("\nDATOS ADAPTADOS DE LA EMPRESA OBJETO COMPANY: ");
         System.out.println(company);
         
-        System.out.println("\n========================================================PATRON TEMPLATE======================================================================");
-
         //APLICANDO PATRÓN TEMPLATE
         System.out.println("\n========================================================PATRON TEMPLATE======================================================================");
 

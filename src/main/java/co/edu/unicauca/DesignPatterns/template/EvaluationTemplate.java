@@ -16,11 +16,11 @@ public abstract class EvaluationTemplate {
 
     // Métodos comunes
     protected void recibirProyecto() {
-        System.out.println("📦 Proyecto recibido por el comité de evaluación.");
+        System.out.println(" Proyecto recibido por el comité de evaluación.");
     }
 
     protected void notificarResultado() {
-        System.out.println("📢 Resultado notificado al estudiante y al asesor.\n");
+        System.out.println(" Resultado notificado al estudiante y al asesor.\n");
     }
 
     // Métodos abstractos que las subclases implementan

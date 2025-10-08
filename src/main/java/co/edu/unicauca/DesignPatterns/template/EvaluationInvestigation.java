@@ -7,7 +7,7 @@ public class EvaluationInvestigation extends EvaluationTemplate {
 
     @Override
     protected void revisarDocumentacion() {
-        System.out.println("🔍 Revisando marco teórico y antecedentes de investigación...");
+        System.out.println(" Revisando marco teórico y antecedentes de investigación...");
     }
 
     @Override
@@ -17,6 +17,6 @@ public class EvaluationInvestigation extends EvaluationTemplate {
 
     @Override
     protected void generarInforme() {
-        System.out.println("📝 Generando informe con observaciones sobre calidad científica.");
+        System.out.println(" Generando informe con observaciones sobre calidad científica.");
     }
 }
